@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.canvas.Canvas?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo7.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Canvas fx:id="canvas" width="400" height="400" onMousePressed="#startDrawing" onMouseDragged="#draw"/>
+
+    <HBox spacing="10">
+        <Button text="Red" onAction="#changeColor" userData="RED"/>
+        <Button text="Blue" onAction="#changeColor" userData="BLUE"/>
+        <Button text="Green" onAction="#changeColor" userData="GREEN"/>
+        <Button text="Black" onAction="#changeColor" userData="BLACK"/>
+        <Button text="Yellow" onAction="#changeColor" userData="YELLOW"/>
+    </HBox>
+
+    <Button text="Save Drawing" onAction="#saveDrawing"/>
+</VBox>
